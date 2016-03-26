@@ -1,0 +1,164 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background:#333;
+}
+.box{
+	width:800px;
+	height:280px;
+	margin:50px auto;
+	position:relative;
+}
+.box .link{
+	width:205px;
+	height:250px;
+	float:left;
+	margin:0 20px;
+}
+.link .icon{
+	display:inline-block;/*span标签转化为块元素*/
+	width:100%;
+	height:190px;
+	transition:0.5s ease-out;/*动画的时间*/
+	-ms-transition:0.5s ease-out;/*ease-out表示变化速度曲线由慢到快linear表示匀速变化*/
+	-moz-transition:0.5s ease-out;
+	-webkit-transition:0.5s ease-out;
+	-o-transition:0.5s ease-out;
+}
+.link_miss .icon{
+	background:url(file:///D|/%E5%AD%A6%E4%B9%A0/html5/css/%E5%B9%BD%E7%81%B5%E6%8C%89%E9%92%AE/images/mission.png) no-repeat center center;/*使图片居中显示*/
+}
+.link_play .icon{
+	background:url(file:///D|/%E5%AD%A6%E4%B9%A0/html5/css/%E5%B9%BD%E7%81%B5%E6%8C%89%E9%92%AE/images/play.png) no-repeat center center;/*使图片居中显示*/
+}
+.link_touch .icon{
+	background:url(file:///D|/%E5%AD%A6%E4%B9%A0/html5/css/%E5%B9%BD%E7%81%B5%E6%8C%89%E9%92%AE/images/touch.png) no-repeat center center;/*使图片居中显示*/
+}
+.link .icon:hover{
+	transform:rotate(360deg) scale(1.2);/*在这里如果两个属性分开写的话就会只执行后面那个*/
+	-ms-transform:rotate(360deg) scale(1.2);/*兼容ie*/
+	-moz-transform:rotate(360deg) scale(1.2);/*兼容firefox*/
+	-webkit-transform:rotate(360deg) scale(1.2);/*兼容chrom*/
+	-o-transform:rotate(360deg) scale(1.2);/*兼容opare*/
+}
+.botton{
+	display:block;/*转换为块元素否则下面的属性不起作用！*/
+	width:180px;
+	height:50px;
+	line-height:50px;/*设置行高和height配合使文字居中*/
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bolder;
+	color:#2dcb70;
+	text-decoration:none;/*去掉链接的下划线*/
+	border:2px solid rgba(255,255,255,0.8);/*表示颜色且有透明度*/
+	padding-left:20px;
+	margin:0 auto;
+	position:relative;/*用与线条的定位*/
+	box-sizing:border-box;/*使盒子的尺寸的大小是计算边框、边距后的大小*/
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;;
+	-webkit-box-sizing:border-box;
+	background:url(file:///D|/%E5%AD%A6%E4%B9%A0/html5/css/%E5%B9%BD%E7%81%B5%E6%8C%89%E9%92%AE/images/allow.png) no-repeat 130px center;
+	transition:0.5s ease;/*ease表示变化速度由慢到快再到慢*/
+	-ms-transition:0.5s ease;
+	-moz-transition:0.5s ease;
+	-webkit-transition:0.5s ease;
+	-o-transition:0.5s ease;
+	
+}
+.botton:hover{
+	background-position:138px center;
+	border:2px solid rgba(255,255,255,1);
+}
+.botton .line{
+	display:block;
+	position:absolute;
+	background:#2dcb70;
+}
+.botton:hover .line{
+	background:#2dcb70;
+	transition:0.5s ease;
+	-ms-transition:0.5s ease;
+	-moz-transition:0.5s ease;
+	-webkit-transition:0.5s ease;
+	-o-transition:0.5s ease;
+}
+.botton .line_top{
+	width:0px;
+	height:2px;
+	left:-100%
+}
+.botton:hover .line_top{
+	width:180px;
+	height:2px;
+	left:-2px;
+	top:-2px;
+}
+.botton .line_right{
+	width:2px;
+	height:0px;
+	top:-100%;
+	left:100%;
+}
+.botton:hover .line_right{
+	width:2px;
+	height:50px;
+	left:100%;
+	top:-2px;
+}
+.botton .line_bottom{
+	width:0px;
+	height:2px;
+	left:200%;
+	top:100%;
+}
+.botton:hover .line_bottom{
+	width:180px;
+	height:2px;
+	left:-2px;
+	top:100%;
+}
+.botton .line_left{
+	width:2px;
+	height:0px;
+	top:200%;
+	left:-2px;
+}
+.botton:hover .line_left{
+	width:2px;
+	height:50px;
+	top:-2px;
+}
+.tip{
+	position:absolute;
+	padding:0 14px;
+	height:35px;
+	line-height:35px;
+	background:#2dcb70;
+	color:#ff;
+	font-size:18px;
+	margin:0 auto;
+	border-radius:5px;/*定义圆角的属性*/
+	top:100px;
+	opacity:0;
+}
+.tip em{
+	font-style:normal;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.tip span{/*画三角形*/
+	display:block;
+	height:0;
+	width:0;
+	overflow:hidden;/*溢出的元素的处理方法-隐藏*/
+	border:7px solid transparent;/*transparent表示边是透明的*/
+	border-top-color:#2dcb70;
+	position:absolute;
+	top:36px;
+	left:50%;/*居中显示*/
+	margin-left:-3px;
+}
